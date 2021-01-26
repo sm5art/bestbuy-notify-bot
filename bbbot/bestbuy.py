@@ -8,8 +8,11 @@ nonavailability_str = '"availability":"http://schema.org/SoldOut"'
 
 def get_request(endpoint):
     req = requests.get(endpoint, headers=headers)
+    print("SENDING REQUEST")
+    print(req.text)
     return req
 
 def availability(endpoint):
+    print(availability_str in get_request(endpoint).text)
     return availability_str in get_request(endpoint).text
 
