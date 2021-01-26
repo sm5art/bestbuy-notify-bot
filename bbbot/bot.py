@@ -12,6 +12,7 @@ bestbuy_cfg = get_cfg('bestbuy')
 @client.event
 async def on_ready():
     global user
+    await client.wait_until_ready()
     user = await client.fetch_user(discord_cfg['user_id'])
     await check_bestbuy_loop()
     print('We have logged in as {0.user}'.format(client))
