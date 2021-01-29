@@ -36,6 +36,6 @@ $ pip install -r requirements.txt
 
 ## Running
 ```
-$ python bot.py
+$ python -m bbbot.bot
 ```
 
